@@ -7,9 +7,11 @@ use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return Article::all();
+        $perPage = $request->get('per_page', 2); // Default to 5 articles per page
+        $articles = Article::paginate($perPage);
+        return response()->json($articles);
     }
 
     public function store(Request $request)

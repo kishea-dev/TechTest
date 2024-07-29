@@ -1,28 +1,65 @@
+// Variables
 $font-stack: Arial, sans-serif;
-$primary-color: #333;
+$primary-color: #3490dc;
+$secondary-color: #ffed4a;
+$background-color: #f8fafc;
+$text-color: #2d3748;
+$card-bg-color: #fff;
+$card-border-color: #e2e8f0;
+
+// Base styles
+body {
+  font-family: $font-stack;
+  background-color: $background-color;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  color: $primary-color;
+}
 
 .articles {
-    font-family: $font-stack;
-    text-align: center;
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: $card-bg-color;
+  border: 1px solid $card-border-color;
+}
 
-    h1 {
-        color: $primary-color;
-    }
+.articles ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-    ul {
-        list-style: none;
-        padding: 0;
+.articles li {
+  background: $card-bg-color;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid $card-border-color;
+}
 
-        li {
-            background: #f9f9f9;
-            margin: 10px 0;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.articles h2 {
+  margin: 0 0 10px;
+  color: $primary-color;
+}
 
-            h2 {
-                margin: 0 0 10px;
-            }
-        }
-    }
+.articles p {
+  margin: 0 0 10px;
+}
+
+.articles small {
+  display: block;
+  margin-top: 10px;
+  color: $secondary-color;
 }
